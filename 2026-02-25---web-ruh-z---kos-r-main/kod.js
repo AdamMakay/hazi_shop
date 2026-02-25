@@ -1,4 +1,5 @@
 function nagyitKep(melyikKep) {
+    
 }
 
 function visszaKep() {

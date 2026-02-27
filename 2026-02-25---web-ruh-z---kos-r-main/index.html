@@ -15,24 +15,49 @@
 				<th>Termek Kepe</th>
 			</tr>
 			<tr>
-				<td class="termekek" onclick="kivalaszt('Kingston HyperX Predator 16GB (4x4GB) DDR4 3200MHz HX432C16PB3K4/16')">Kingston HyperX Predator 16GB (4x4GB) DDR4 3200MHz HX432C16PB3K4/16</td>
+				<td class="termekek" >Kingston HyperX Predator 16GB (4x4GB) DDR4 3200MHz HX432C16PB3K4/16</td>
 				<td><img class="kiskep" onmouseover="document.getElementById('nagykep').src = 'RAM.jpg'" onmouseout="document.getElementById('nagykep').src = 'ures.jpg'" src="RAM.jpg" alt="RAM"></td>
+				<td>
+					<label for="szam">Mennyit akarsz: </label>
+					<input min="0" value="0" type="number" id="szam" oninput="document.getElementById('osszegRam').innerHTML = 90000 *  Number(this.value), kivalaszt()">
+				</td>
+				<td id="osszegRam">0</td>
 			</tr>
 			<tr>
-				<td class="termekek" onclick='kivalaszt("LG 27MP59G-P Monitor")'>LG 27MP59G-P Monitor</td>
+				<td class="termekek" >LG 27MP59G-P Monitor</td>
 				<td><img class="kiskep" onmouseover="document.getElementById('nagykep').src = 'monitor.jpg'" onmouseout="document.getElementById('nagykep').src = 'ures.jpg'" onmouseout="document.getElementById('nagykep').src = 'ures.jpg'" src="monitor.jpg" alt="monitor"></td>
+				<td>
+					<label for="szam">Mennyit akarsz: </label>
+					<input min="0" value="0" type="number" id="szam" oninput="document.getElementById('osszegMonitor').innerHTML = 25000 *  Number(this.value), kivalaszt()">
+				</td>
+				<td id="osszegMonitor" >0</td>
 			</tr>
 			<tr>
-				<td class="termekek" onclick="kivalaszt('Western Digital Red 3.5&quot; 2TB 5400rpm 64MB SATA3 WD20EFRX')">Western Digital Red 3.5" 2TB 5400rpm 64MB SATA3 WD20EFRX</td>
+				<td class="termekek" >Western Digital Red 3.5" 2TB 5400rpm 64MB SATA3 WD20EFRX</td>
 				<td><img class="kiskep" onmouseover="document.getElementById('nagykep').src = 'HDD.jpg'" onmouseout="document.getElementById('nagykep').src = 'ures.jpg'" src="HDD.jpg" alt="SSD"></td>
+				<td>
+					<label for="szam">Mennyit akarsz: </label>
+					<input min="0" value="0" type="number" id="szam"  oninput="document.getElementById('osszegHDD').innerHTML = 20000 *  Number(this.value), kivalaszt()">
+				</td>
+				<td id="osszegHDD">0</td>
 			</tr>
 			<tr>
-				<td class="termekek" onclick="kivalaszt('Samsung 970 EVO 500GB M.2 PCIe MZ-V7E500BW')">Samsung 970 EVO 500GB M.2 PCIe MZ-V7E500BW</td>
+				<td class="termekek" >Samsung 970 EVO 500GB M.2 PCIe MZ-V7E500BW</td>
 				<td><img class="kiskep" onmouseover="document.getElementById('nagykep').src = 'SSD.jpg'" onmouseout="document.getElementById('nagykep').src = 'ures.jpg'" src="SSD.jpg" alt="SSD"></td>
+				<td>
+					<label for="szam">Mennyit akarsz: </label>
+					<input min="0" value="0" type="number" id="szam" oninput="document.getElementById('osszegSSD').innerHTML = 65000 *  Number(this.value), kivalaszt()">
+				</td>
+				<td id="osszegSSD">0</td>
 			</tr>
 			<tr>
-				<td class="termekek" onclick="kivalaszt('Chieftec Smart 500W (GPS-500A8)')">Chieftec Smart 500W (GPS-500A8)</td>
+				<td class="termekek"></td>
 				<td><img class="kiskep" onmouseover="document.getElementById('nagykep').src = 'tap.jpg'" onmouseout="document.getElementById('nagykep').src = 'ures.jpg'" src="tap.jpg" alt="tap"></td>
+				<td>
+					<label for="szam">Mennyit akarsz: </label>
+					<input min="0" value="0" type="number" id="szam" oninput="document.getElementById('osszegTap').innerHTML = 45000 *  Number(this.value), kivalaszt()">
+				</td>
+				<td id="osszegTap">0</td>
 			</tr>
 		</table>
 		</section>	
@@ -44,7 +69,7 @@
 
 	<div ID="kosar">
 		<h2>Kosár tartalma:</h2>
-		
+		<p id="Osszeg">Összeg: </p>
 	</div>
 	<script src="kod.js"></script>	
 </body>
